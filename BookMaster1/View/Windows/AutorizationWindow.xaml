@@ -1,0 +1,32 @@
+﻿<Window x:Class="BookMaster1.View.Windows.AutorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookMaster1.View.Windows"
+        mc:Ignorable="d"
+        Title="Авторизация" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Логин"/>
+        <TextBlock Grid.Row="2" Text="Пароль"/>
+        <TextBox Name="LoginTB"  Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Text="test" Width="220"/>
+        <PasswordBox Name="PasswordPB"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Password="1" Width="220"/>
+        <Button Name="LoginBtn" Grid.Row="4" Grid.Column="2" Content="Войти" Click="LoginBtn_Click"/>
+        <Button Name="CancelBtn" Grid.Row="4" Grid.Column="4" Content="Отмена" Click="CancelBtn_Click"/>
+    </Grid>
+</Window>

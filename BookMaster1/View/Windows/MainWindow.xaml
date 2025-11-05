@@ -1,0 +1,38 @@
+﻿<Window x:Class="BookMaster1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookMaster1"
+        mc:Ignorable="d"
+        Title="Bookmaster3000" Height="720" Width="1280" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Menu>
+          <MenuItem Header="File">
+            <MenuItem Name="LoginMI"  Header="Login" Click="LoginMI_Click"/>
+            <MenuItem Name="LogoutMI" Header="Logout" Click="LogoutMI_Click"/>
+            <MenuItem Name="CloseMI" Header="Close" Click="CloseMI_Click"/>
+        </MenuItem>
+        <MenuItem Name="LibraryMenu" Header="Library" Grid.Column="2" >
+            <MenuItem Name="BrowseCatalogMI" Header="BrowseCatalog" Click="BrowseCatalogMI_Click"/>
+            <MenuItem Name="ManageCustomersMI" Header="ManageCustomers" Click="ManageCustomersMI_Click"/>
+            <MenuItem Name="CirculationMI" Header="Circulation" Click="Circulation_Click"/>
+            <MenuItem Name="ReportsMI" Header="Reposrts" Click="ReportsMI_Click"/>
+        </MenuItem>
+            </Menu>
+    </Grid>
+        <Frame Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
