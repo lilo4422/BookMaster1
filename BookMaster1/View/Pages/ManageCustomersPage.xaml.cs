@@ -37,8 +37,11 @@ namespace BookMaster1.View.Pages
 
         private void EditCustomerBTN_Click(object sender, RoutedEventArgs e)
         {
-            AddEditCustomer w = new AddEditCustomer();
-            w.Show();
+            if (CutomerLV.SelectedItem != null)
+            {
+                AddEditCustomer w = new AddEditCustomer(CutomerLV.SelectedItem as Customer);
+                w.Show();
+            }
         }
 
         private void SearchCustomerBTN_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookMaster1.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,16 @@ namespace BookMaster1.View.Windows
         public AddEditCustomer()
         {
             InitializeComponent();
+
+            string lastIndex = App.context.Customer.Max(customer => customer.Id);
+            int lastIndexNumber = Convert.ToInt32(lastIndex.Remove(0, 1));
+            IdTB.Text = $"C{++lastIndexNumber}";
+        }
+        public AddEditCustomer(Customer selectedCustomer)
+        {
+            InitializeComponent();
+
+            DataContext = selectedCustomer;
         }
 
         private void SaveBTN_Click(object sender, RoutedEventArgs e)
