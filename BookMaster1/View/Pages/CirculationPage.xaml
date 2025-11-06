@@ -37,7 +37,7 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="30" />
                 <RowDefinition Height="50" />
-                <RowDefinition Height="1*" />
+                <RowDefinition Height="20" />
             </Grid.RowDefinitions>
             <Image Grid.ColumnSpan="4" Grid.Row="0" Grid.Column="0" Source="/Resources/Images/logo.png" />
             <TextBlock Name="CustomerIdTBL" Text="Customer ID" Grid.Column="1" Grid.Row="2"/>
@@ -47,10 +47,64 @@
             <TextBlock Name="CurrentCustomerIDTBL" Text="C4343" Grid.Row="10" Grid.Column="1"/>
             <TextBlock Name="FSDFSDFS" Text="5TRETER" Grid.Column="1" Grid.Row="12"/>
             <TextBlock Name="FSDFSDFS4" Text="5TRETER" Grid.Column="1" Grid.Row="14"/>
-            <Button Name="EditCirculationBTN" Content="Edit" Grid.Row="16" Grid.Column="2"/>
+            <Button Name="EditCirculationBTN" Content="Edit" Grid.Row="16" Grid.Column="2" Click="EditCirculationBTN_Click"/>
         </Grid>
         <Grid Grid.Column="1">
-            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="280" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="IssueReturnTBL" Text="Issue / Return" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1"/>
+            <TextBlock Name="BookIdTBL" Text="Book ID" Grid.Column="1" Grid.Row="3"/>
+            <TextBox Name="BookIdTB" Grid.Row="3" Grid.Column="3"/>
+            <TextBlock Name="TitleBookTBL" Text="Title:" Grid.Row="5" Grid.Column="3"/>
+            <Button Name="IssueBTN" Content="Issue" Grid.Row="3" Grid.Column="5" Click="IssueBTN_Click"/>
+            <Button Name="ReturnBTN" Content="Return" Grid.Row="5" Grid.Column="5" Click="ReturnBTN_Click"/>
+            <TextBlock Name="CurrentIssuesTBL" Text="Current Issue" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="7"/>
+            <ListView Name="CurrentIssueLV" Grid.Column="0" Grid.ColumnSpan="8" Grid.Row="9">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Book.Title}"/>
+                        <GridViewColumn Header="Date Of issue" DisplayMemberBinding="{Binding DateOfIssue}"/>
+                        <GridViewColumn Header="Return until" DisplayMemberBinding="{Binding ReturnUntil}"/>
+                    </GridView> 
+                </ListView.View>
+            </ListView>
+            <Button Name="RenewBTN" Content="Renew" Grid.Column="5" Grid.Row="11" Click="RenewBTN_Click"/>
+            <TextBlock Name="HistoryTBL" Text="History" Grid.Column="1" Grid.Row="13"/>
+            <ListView Name="HistoryLV" Grid.Column="0" Grid.ColumnSpan="8" Grid.Row="15" Grid.RowSpan="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Book.Title}"/>
+                        <GridViewColumn Header="Date Of issue" DisplayMemberBinding="{Binding DateOfIssue}"/>
+                        <GridViewColumn Header="Return Date" DisplayMemberBinding="{Binding DateOfReturn}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </Grid>
     </Grid>
 </Page>

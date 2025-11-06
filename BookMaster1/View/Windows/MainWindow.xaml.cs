@@ -59,7 +59,7 @@ namespace BookMaster1
 
         private void Circulation_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new CirculationPage());
         }
 
         private void ReportsMI_Click(object sender, RoutedEventArgs e)

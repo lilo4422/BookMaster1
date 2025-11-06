@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookMaster1.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,32 @@ namespace BookMaster1.View.Pages
     /// </summary>
     public partial class CirculationPage : Page
     {
+        List<Circulation> circulationList=App.context.Circulation.ToList();
         public CirculationPage()
         {
             InitializeComponent();
+            CurrentIssueLV.ItemsSource = circulationList;
+            HistoryLV.ItemsSource = circulationList;
+        }
+
+        private void EditCirculationBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RenewBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void IssueBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ReturnBTN_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
