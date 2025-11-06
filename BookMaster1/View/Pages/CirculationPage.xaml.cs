@@ -1,6 +1,7 @@
 ﻿using BookMaster1.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,9 @@ namespace BookMaster1.View.Pages
     /// </summary>
     public partial class CirculationPage : Page
     {
-        List<Circulation> circulationList=App.context.Circulation.ToList();
+        Customer customer = new Customer();
+        Book book = new Book();
+        List<Circulation> circulationList = App.context.Circulation.ToList();
         public CirculationPage()
         {
             InitializeComponent();
@@ -47,6 +50,15 @@ namespace BookMaster1.View.Pages
         private void ReturnBTN_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void CirculationBTN_Click(object sender, RoutedEventArgs e)
+        {
+            customer=App.context.Customer.FirstOrDefault(customer=> customer.Id==CustomerIdTB.Text);
+            if (customer!=null) 
+            {
+                SearchCustomerGrid.DataContext = customer;
+            }
         }
     }
 }
