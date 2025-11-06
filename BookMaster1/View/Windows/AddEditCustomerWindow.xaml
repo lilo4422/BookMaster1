@@ -24,7 +24,9 @@
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="280" />
+            <ColumnDefinition Width="94" />
+            <ColumnDefinition Width="94" />
+            <ColumnDefinition Width="94" />
             <ColumnDefinition Width="40" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="20" />
@@ -35,29 +37,33 @@
         <TextBlock Name="NameTBL" Text="Name" Grid.Column="1" Grid.Row="3"/>
         <TextBlock Name="AddressTBL" Text="Address" Grid.Column="1" Grid.Row="5"/>
         <TextBlock Name="ZipCityTBL" Text="Zip/City" Grid.Column="1" Grid.Row="7"/>
-        <TextBox Name="IdTB" Grid.Column="3" Grid.Row="1" Text="{Binding Id}"/>
-        <TextBox Name="NameTB" Grid.Column="3" Grid.Row="3"/>
-        <TextBox Name="AddressTB" Grid.Column="3" Grid.Row="5"/> 
-        <TextBlock Name="PhoneTBL" Text="Phone" Grid.Column="5" Grid.Row="3"/>
-        <TextBlock Name="EmailTBL" Text="Email" Grid.Column="5" Grid.Row="5"/>
-        <TextBox Name="PhoneTB" Grid.Column="7" Grid.Row="3"/>
-        <TextBox Name="EmailTB" Grid.Column="7" Grid.Row="5"/>
-        <Grid Grid.Column="3" Grid.Row="7">
+        <TextBox Name="IdTB" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="1" Background="Gray" Opacity="0.25"  Text="{Binding Id}" Cursor=""/>
+        <TextBox Name="FNameTB" Grid.Column="3" Grid.Row="3"/>
+        <TextBox Name="LNameTB" Grid.Column="4" Grid.Row="3"/>
+        <TextBox Name="MNameTB" Grid.Column="5" Grid.Row="3"/>
+        <TextBox Name="AddressTB" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="5"/> 
+        <TextBlock Name="PhoneTBL" Text="Phone" Grid.Column="7" Grid.Row="3"/>
+        <TextBlock Name="EmailTBL" Text="Email" Grid.Column="7" Grid.Row="5"/>
+        <TextBox Name="PhoneTB" Grid.Column="9" Grid.Row="3"/>
+        <TextBox Name="EmailTB" Grid.Column="9" Grid.Row="5"/>
+        <Grid Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100" />
                 <ColumnDefinition Width="10" />
                 <ColumnDefinition Width="170" />
             </Grid.ColumnDefinitions>
             <TextBox Name="ZipTB" Grid.Column="0"/>
-            <TextBox Name="CityTB" Grid.Column="2"/>
+            <ComboBox Name="CitiesCmb" DisplayMemberPath="Name" SelectedValuePath="Id" Grid.Column="2"/>
         </Grid>
-        <Grid Grid.Column="7" Grid.Row="9">
+        <Grid Grid.Column="9" Grid.Row="9">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="135" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="135" />
             </Grid.ColumnDefinitions>
-            <Button Name="SaveBTN" Grid.Column="0" Content="Save" Click="SaveBTN_Click" />
+          
+            <Button Name="EditBTN" Grid.Column="0" Content="Edit" Click="EditBTN_Click" /> 
+            <Button Name="SaveBTN" Grid.Column="0" Content="Save" Click="SaveBTN_Click" Cursor="Hand" />
             <Button Name="Cancel" Grid.Column="2" Content="Cancel" Click="CancelBTN_Click"/>
         </Grid>
     </Grid>
