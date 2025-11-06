@@ -68,6 +68,9 @@
     <Compile Include="View\Pages\BrowseCatalogPage.xaml.cs">
       <DependentUpon>BrowseCatalogPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\CirculationPage.xaml.cs">
+      <DependentUpon>CirculationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\ManageCustomersPage.xaml.cs">
       <DependentUpon>ManageCustomersPage.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,10 @@
     <Compile Include="View\Windows\AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Pages\CirculationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\ManageCustomersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
