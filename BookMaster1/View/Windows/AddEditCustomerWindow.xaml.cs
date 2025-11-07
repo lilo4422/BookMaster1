@@ -21,6 +21,7 @@ namespace BookMaster1.View.Windows
     /// </summary>
     public partial class AddEditCustomer : Window
     {
+        List<Customer> customerList;
         public AddEditCustomer()
         {
             InitializeComponent();
@@ -36,12 +37,11 @@ namespace BookMaster1.View.Windows
         public AddEditCustomer(Customer selectedCustomer)
         {
             InitializeComponent();
-
+            IdTB.Text = selectedCustomer.Id;
             EditBTN.Visibility = Visibility.Visible;
             SaveBTN.Visibility = Visibility.Collapsed;
-   
-            DataContext = selectedCustomer;
 
+            DataContext = selectedCustomer;
             CitiesCmb.ItemsSource = App.context.City.ToList();
         }
 

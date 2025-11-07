@@ -57,7 +57,7 @@
             </Grid>
             <Button Name="EditCirculationBTN" Content="Edit" Grid.Row="16" Grid.Column="2" Click="EditCirculationBTN_Click"/>
         </Grid>
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Name="IssueReturnBookGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30" />
                 <RowDefinition Height="auto" />

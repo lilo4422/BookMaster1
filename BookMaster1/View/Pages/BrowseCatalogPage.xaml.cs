@@ -1,7 +1,9 @@
 ﻿using BookMaster1.AppData;
 using BookMaster1.Model;
+using BookMaster1.View.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -90,7 +92,7 @@ namespace BookMaster1.View.Pages
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void PageNumberTB_TextChanged(object sender, TextChangedEventArgs e)

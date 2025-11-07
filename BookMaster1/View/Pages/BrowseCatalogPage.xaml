@@ -175,9 +175,12 @@
                     </Grid>
                 </Grid>
                 <TextBlock Name="NameBookTBL" Text="{Binding Title}" Grid.Row="0"/>
-                <TextBlock Name="AuthorBookTBL" FontSize="15" Text="{Binding Authors}" Grid.Row="2">
-                    <Hyperlink Click="Hyperlink_Click"/>
+                <TextBlock Name="AuthorBookTBL"  FontSize="15"  Grid.Row="2">
+                   <Hyperlink NavigateUri="AuthorsBioWindow.xaml">
+                    <TextBlock Text="{Binding Authors}"/>
+                </Hyperlink>
                 </TextBlock>
+                
                 <TextBlock Name="DateFirstPablishTBL" FontSize="12" Text="{Binding FirstPublishDate}" Grid.Row="4"/>
                 <TextBlock Text="Description" FontSize="15" Grid.Row="6"/>
                 <TextBlock Name="DesriptionTBL" FontSize="11" VerticalAlignment="Top" Text="{Binding Description}" Grid.Row="8"/>

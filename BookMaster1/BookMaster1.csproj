@@ -77,6 +77,9 @@
     <Compile Include="View\Windows\AddEditCustomerWindow.xaml.cs">
       <DependentUpon>AddEditCustomerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\AuthorsBioWindow.xaml.cs">
+      <DependentUpon>AuthorsBioWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\AutorizationWindow.xaml.cs">
       <DependentUpon>AutorizationWindow.xaml</DependentUpon>
     </Compile>
@@ -89,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\AddEditCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AuthorsBioWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
