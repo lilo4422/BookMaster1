@@ -1,5 +1,4 @@
-﻿using BookMaster1.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +19,6 @@ namespace BookMaster1.View.Windows
     /// </summary>
     public partial class AuthorsBioWindow : Window
     {
-        List<Author> authors=App.context.Author.ToList();
         public AuthorsBioWindow()
         {
             InitializeComponent();

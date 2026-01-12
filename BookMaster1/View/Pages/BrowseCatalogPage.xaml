@@ -177,7 +177,8 @@
                 <TextBlock Name="NameBookTBL" Text="{Binding Title}" Grid.Row="0"/>
                 <TextBlock Name="AuthorBookTBL"  FontSize="15"  Grid.Row="2">
                    <Hyperlink NavigateUri="AuthorsBioWindow.xaml">
-                    <TextBlock Text="{Binding Authors}"/>
+                    <TextBlock Text="{Binding Authors}">
+                        </TextBlock>
                 </Hyperlink>
                 </TextBlock>
                 

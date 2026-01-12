@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookMaster1.View.Windows"
         mc:Ignorable="d"
-        Title="AuthorsBioWindow" SizeToContent="WidthAndHeight">
+           Title="AuthorsBioWindow" SizeToContent="WidthAndHeight">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -29,7 +29,7 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <ComboBox Name="AuthorsCB" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"
-                  ItemsSource="{Binding Author.FullName}"/>
+              ItemsSource="{Binding Author.FullName}"/>
         <TextBlock Name="BirthDateTBL" Text="32 43 4343" Grid.Column="1" Grid.Row="3"/>
         <TextBlock Name="BioTBL" Text="Bio" Grid.Column="1" Grid.Row="5"/>
         <TextBlock Name="AuthorBioTBL" Text="435rfew4t4g43etge4tge4t534543" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7"/>
